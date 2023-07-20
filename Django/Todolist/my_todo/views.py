@@ -27,3 +27,12 @@ def createTodo(request):
     return HttpResponseRedirect(reverse('index'))
     # 1. reverse 함수를 통해 urls.py에서 index라는 url을 찾는다
     # 2. HttpResponseRedirect 함수를 통해 해당 url로 이동한다
+
+def doneTodo(request):
+    done_todo_id = request.GET['todoNum']
+    # index.html의 form 태그에서 method GET으로 보냈기 때문에 request에서도 GET으로 받는다
+    print('완료한 todo의 id:', done_todo_id)
+
+    todo = Todo.objects.get(id=done_todo_id)
+    todo.delete()
+    return HttpResponseRedirect(reverse('index'))

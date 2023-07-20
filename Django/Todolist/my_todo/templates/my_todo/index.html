@@ -56,7 +56,7 @@
                     {% for todo in todos %}
                     <!--views.index로 받은 dict값의 key값을 이용해 바로 value에 접근 가능-->
 
-                    <form action="" method="GET">
+                    <form action="./deleteTodo/" method="GET">
                         <div class="input-group" name='todo1'>
                             <li class="list-group-item">{{todo.content}}</li>
                             <!--todo.content: todo의 데이터에서 content에 접근-->
