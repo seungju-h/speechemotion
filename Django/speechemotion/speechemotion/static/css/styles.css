@@ -1,0 +1,490 @@
+/*-------------
+ 	General
+-------------*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	/*opacity: 0.9;*/
+}
+
+a:hover{
+	opacity: 1;
+}
+
+a.btn{
+	color: #414a4f;
+	border-radius: 50px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+	font-weight: 800;
+	text-align: center;
+	/*border: 7px solid #414a4f;*/
+}
+
+.btns{
+	text-align: center;
+}
+
+.btns .btn:first-child {
+    margin-right: 20px;
+}
+
+hr{
+	width: 150px;
+	height: 2px;
+	background-color: #2196F3;
+	border: 0;
+	margin-bottom: 80px;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 125px 100px;
+}
+
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+section h3.title{
+	color: #414a4f;
+	text-transform: capitalize;
+	font: bold 32px 'Open Sans', sans-serif;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+section p{
+	max-width: 800px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 0 20px;
+	line-height: 2;
+}
+
+ul.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 35px 100px 0;
+}
+
+header h2{
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+}
+
+header nav{
+	display: flex;
+}
+
+header nav li{
+	margin: 0 15px;
+}
+
+header nav li:first-child{
+	margin-left: 0;
+}
+
+header nav li:last-child{
+	margin-right: 0;
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+/*로고*/
+
+
+#logo img {
+	width: 300px;
+}
+
+
+
+/*----------------
+ 	Hero Section
+----------------*/
+
+.hero{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #fff;
+	text-align: center;
+}
+
+.hero .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-color: #2196F3;
+	z-index: -1;
+}
+
+/*.hero .background-image:after{*/
+/*	content: '';*/
+/*	position: absolute;*/
+/*	top: 0;*/
+/*	left: 0;*/
+/*	width: 100%;*/
+/*	height: 100%;*/
+/*	background-color: #414a4f;*/
+/*	opacity: 0.75;*/
+/*}*/
+
+
+
+.hero h1{
+	font: bold 55px 'SUITE-Regular', sans-serif;
+	margin-bottom: 15px;
+}
+
+.hero h3{
+	font: normal 28px 'SUITE-Regular', sans-serif;
+	margin-bottom: 40px;
+}
+
+.hero div > a.btn{
+	width: 400px;
+	height: 100px;
+	padding: 20px 20px;
+}
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+
+	.hero h1{
+		font-size: 46px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 500px;
+	height: 300px;
+    max-width: 90%;
+}
+
+.popup-content-signup {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 600px;
+	height: 400px;
+    max-width: 90%;
+}
+
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Add styles for the new table layout */
+.popup-content table, .popup-content-signup table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.popup-content tr, .popup-content-signup tr {
+    width: 50px;
+}
+
+.popup-content td, .popup-content-signup td {
+    padding: 8px;
+}
+
+
+.popup-content h2, .popup-content-signup h2 {
+	margin-bottom: 30px;
+}
+
+.popup-content label, .popup-content-signup label {
+    font-weight: bold;
+    display: block;
+}
+
+.popup-content input, .popup-content-signup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+/* Position the login button to the right */
+.popup-content .login-btn, .popup-content-signup .login-btn {
+    margin-left: auto;
+    width: 100%;
+    padding: 35px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .popup-content label, login-btn label {
+        font-size: 12px;
+    }
+
+    .popup-content .login-btn, .popup-content-signup .login-btn {
+        padding: 15px 0;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+	text-align: center;
+}
+
+/* Style the buttons */
+.check-btn,
+.generate-btn,
+.signup-btn {
+    padding: 10px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.signup-btn-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	vertical-align: middle;
+    text-align: center;
+}
+
+.check-btn:hover,
+.generate-btn:hover,
+.signup-btn:hover {
+    background-color: #1976D2;
+}
+
+/* Adjust the signup button to fill the column width */
+.signup-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.popup-content table td, .popup-content-signup table td {
+    padding: 8px;
+	/*width: 50px;*/
+}
+
+
+/*level 난이도 선택*/
+
+.btns {
+    display: flex;
+    justify-content: space-evenly; /* Distribute the buttons evenly */
+    align-items: center; /* Align the items vertically */
+    flex-wrap: wrap; /* Wrap the buttons if the screen width is not enough */
+}
+
+.btn-level {
+    display: flex; /* Use flexbox for button layout */
+    flex-direction: column; /* Align text vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: center; /* Center text horizontally */
+    margin: 20px; /* Adjust margin for spacing */
+    padding: 20px; /* Adjust padding for content */
+    width: 300px;
+    height: 400px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #2196F3;
+	border: 10px solid black;
+}
+
+.btn-level:hover {
+    background-color: #1976D2; /* Change background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btns {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        align-items: center; /* Center buttons horizontally */
+    }
+
+    .btn-level {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Limit maximum width */
+        height: auto; /* Adjust height automatically */
+    }
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    width: 60px;
+}
+
+/* 프로필 */
+
+.bottom-left-container {
+    position: fixed;
+    bottom: 80px;
+    left: 120px;
+    z-index: 1000;
+}
+
+/* Style the content within the container */
+.bottom-left-content {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Style the image */
+.bottom-left-image img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Style the nickname and score information */
+.bottom-left-info p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'SUITE-Regular', sans-serif;
+}

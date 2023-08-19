@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speech Emotion</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+	<script></script>
+	<script src="../../static/script.js"></script>
+
+<body>
+
+	<header>
+		<h2 id="logo"><img src="../../static/logo.png" ></h2>
+	</header>
+
+	<section class="hero">
+		<div class="background-image" style="background-image: url('../../static/background.jpeg');"></div>
+
+        <div class="btns">
+			<a href="" class="btn-level" style="background-color: #FFDF6F;">Easy</a>
+            <a href="" class="btn-level" style="background-color: #FFB865;">Normal</a>
+            <a href="" class="btn-level" style="background-color: #FF6464;">Hard</a>
+        </div>
+	</section>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger-menu">
+        <img src="../../static/menu.png" alt="Menu" />
+    </div>
+
+    <!-- 프로필 부분: 랜덤 캐릭터, 닉네임, 점수 -->
+    <div class="bottom-left-container">
+        <div class="bottom-left-image">
+            <img src="../../static/img.png" alt="Image" />
+        </div>
+        <div class="bottom-left-info">
+            <p>닉네임</p>
+            <p>최고 점수: 100</p>
+        </div>
+    </div>
+
+</body>
+</html>

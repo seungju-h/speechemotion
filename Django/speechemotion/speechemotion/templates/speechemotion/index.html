@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Speech Emotion</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+</head>
+
+	<script></script>
+	<script src="../../static/script.js"></script>
+
+<body>
+
+	<header>
+		<h2 id="logo"><img src="../../static/logo.png" ></h2>
+	</header>
+
+	<section class="hero">
+		<div class="background-image" style="background-image: url('../../static/background.jpeg');"></div>
+		<h1>스피치 이모션: 감정 표현 점수 게임</h1>
+        <br>
+		<h3>게임을 플레이하려면 로그인해 주세요.</h3>
+        <br>
+        <div class="btns">
+			<a href="#login-popup" class="btn">로그인</a>
+            <a href="#signup-popup" class="btn">회원가입</a>
+        </div>
+
+	</section>
+
+
+    <!-- Log In Popup -->
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <h2>로그인</h2>
+            <form id="login-form" action="{% url 'login' %}" method="post">
+                <table>
+                    <tr>
+                        <td><label for="username">아이디</label></td>
+                        <td><input type="text" id="username" placeholder="아이디"></td>
+                        <td rowspan="2"><button type="submit" class="login-btn">로그인</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">비밀번호</label></td>
+                        <td><input type="password" id="password" placeholder="비밀번호"></td>
+                    </tr>
+                </table>
+                <div class="error-message" id="login-error">ID 또는 비밀번호가 잘못되었습니다.</div>
+            </form>
+            <a href="#" class="close-popup">X</a>
+        </div>
+    </div>
+
+    <!-- Sign Up Popup -->
+    <div id="signup-popup" class="popup">
+    <div class="popup-content-signup">
+        <h2>회원가입</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="signup-username">아이디</label></td>
+                    <td><input type="text" id="signup-username" placeholder="아이디"></td>
+                    <td><button type="button" class="check-btn" id="check-username-btn">중복 확인</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><div class="error-message" id="username-error">아이디가 이미 사용 중입니다.</div></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-password">비밀번호</label></td>
+                    <td><input type="password" id="signup-password" placeholder="비밀번호"></td>
+                </tr>
+                <tr>
+                    <td><label for="nickname">닉네임</label></td>
+                    <td><input type="text" id="nickname" placeholder="닉네임"></td>
+                    <td><button type="button" class="check-btn" id="check-nickname-btn">중복 확인</button></td>
+                    <td><button type="button" class="generate-btn" id="generate-nickname-btn">랜덤 닉네임 생성</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="2"><div class="error-message" id="nickname-error">닉네임이 이미 사용 중입니다.</div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="signup-btn-cell">
+                        <button type="submit" class="signup-btn">회원가입</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+            <a href="#" class="close-popup">X</a>
+        </div>
+    </div>
